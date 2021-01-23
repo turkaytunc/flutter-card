@@ -4,7 +4,15 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  int age = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
