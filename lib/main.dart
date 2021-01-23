@@ -10,7 +10,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   int age = 0;
 
   @override
@@ -35,7 +34,9 @@ class _MyAppState extends State<MyApp> {
                   radius: 50,
                 ),
               ),
-              Divider(color: Colors.white24,),
+              Divider(
+                color: Colors.white24,
+              ),
               SizedBox(
                 height: 15,
               ),
@@ -61,7 +62,7 @@ class _MyAppState extends State<MyApp> {
                 height: 5,
               ),
               Text(
-                '90',
+                '$age',
                 style: TextStyle(color: Colors.white60, fontSize: 30),
               ),
               SizedBox(
@@ -94,6 +95,18 @@ class _MyAppState extends State<MyApp> {
               )
             ],
           ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: ()=>{setState(()=>{
+            age++
+          })},
+          child: Icon(
+            Icons.add,
+            size: 35,
+            color: Colors.redAccent,
+          ),
+          backgroundColor: Colors.white24,
+          elevation: 1,
         ),
       ),
     );
