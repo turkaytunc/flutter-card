@@ -17,11 +17,19 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         ),
         body: Padding(
-          padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
+          padding: EdgeInsets.fromLTRB(20, 20, 30, 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CircleAvatar(backgroundImage: AssetImage('assets/images/cat.jpg'),),
+              Center(
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/images/cat.jpg'),
+                  radius: 50,
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
               Text(
                 'Name',
                 style: TextStyle(color: Colors.redAccent),
@@ -31,7 +39,7 @@ class MyApp extends StatelessWidget {
               ),
               Text(
                 'Kent',
-                style: TextStyle(color: Colors.blue, fontSize: 30),
+                style: TextStyle(color: Colors.white60, fontSize: 30),
               ),
               SizedBox(
                 height: 15,
@@ -45,16 +53,33 @@ class MyApp extends StatelessWidget {
               ),
               Text(
                 '90',
-                style: TextStyle(color: Colors.blue, fontSize: 30),
+                style: TextStyle(color: Colors.white60, fontSize: 30),
               ),
               SizedBox(
                 height: 15,
               ),
+              Text(
+                'Email',
+                style: TextStyle(color: Colors.redAccent),
+              ),
+              SizedBox(
+                height: 5,
+              ),
               Row(
                 children: [
                   Icon(
-                    Icons.accessible_forward_outlined,
-                    color: Colors.red,
+                    Icons.mail,
+                    color: Colors.white60,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'cat@cat.com',
+                    style: TextStyle(
+                      color: Colors.white60,
+                      fontSize: 20,
+                    ),
                   )
                 ],
               )
