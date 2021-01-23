@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
                   radius: 50,
                 ),
               ),
+              Divider(color: Colors.white24,),
               SizedBox(
                 height: 15,
               ),
